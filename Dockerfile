@@ -34,4 +34,4 @@ RUN chown root:root -R /var/www/html && \
 EXPOSE 80
 
 COPY main.sh /
-ENTRYPOINT ["sudo /main.sh"]
+ENTRYPOINT ["sudo", "/main.sh"]
