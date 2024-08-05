@@ -11,7 +11,9 @@ RUN apt update
 RUN apt install -y \
     apache2 \
     php \
-    libapache2-mod-php
+    libapache2-mod-php \
+    python \
+    python3 
 
 # add new user if it is needed
 # RUN useradd -d /home/ctf/ -m -p ctf -s /bin/bash ctf
