@@ -27,7 +27,9 @@ COPY bypass /var/www/html/bypass
 COPY index.php /var/www/html/index.php
 
 RUN chown root:root -R /var/www/html && \
-    rm /var/www/html/index.html
+    rm /var/www/html/index.html \
+    rm /var/www/html/index.php
+
 
 EXPOSE 80
 
