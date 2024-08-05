@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo '[+] Starting apache'
-sudo service apache2 start
+service apache2 start
 
 while true
 do
