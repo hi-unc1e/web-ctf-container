@@ -12,6 +12,11 @@ RUN apt install -y \
     apache2 \
     php \
     libapache2-mod-php \
+    wget \
+    curl \
+    nmap \
+    ping \
+    arp \
     python \
     python3 \
     bash \
