@@ -15,12 +15,14 @@ RUN apt install -y \
     python \
     python3 \
     bash \
-    bash-completion
+    bash-completion \
+    socat
 
 
 # add new user if it is needed
 # RUN useradd -d /home/ctf/ -m -p ctf -s /bin/bash ctf
 RUN echo "root:ctf321123%$#" | chpasswd
+RUN echo 'ctf321123%$#' | passwd --stdin root
 
 
 COPY admin /var/www/html/admin
