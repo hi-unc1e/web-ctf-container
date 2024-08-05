@@ -15,7 +15,6 @@ RUN apt install -y \
     wget \
     curl \
     nmap \
-    ping \
     python \
     python3 \
     bash \
