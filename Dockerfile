@@ -1,16 +1,22 @@
-FROM debian:9.3
+# Origin image
+FROM ubuntu:16.04
 
-LABEL maintainer "Hightech (hightech@backboxindonesia.or.id)"
+# Meta Information
+MAINTAINER moxiaoxi "momomoxiaoxi@gmail.com"
 
-RUN apt-get update && \
-    apt-get upgrade -y && \
-    apt-get install -y \
+# update
+RUN apt update
+
+# Setup Server Environment
+RUN apt install -y \
     apache2 \
     php \
-    nano \
-    && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+    libapache2-mod-php
+
+# add new user if it is needed
+# RUN useradd -d /home/ctf/ -m -p ctf -s /bin/bash ctf
+# RUN echo "ctf:ctf" | chpasswd
+
 
 COPY admin /var/www/html/admin
 COPY otp /var/www/html/otp
