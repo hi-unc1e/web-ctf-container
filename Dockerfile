@@ -13,7 +13,10 @@ RUN apt install -y \
     php \
     libapache2-mod-php \
     python \
-    python3 
+    python3 \
+    bash \
+    bash-completion
+
 
 # add new user if it is needed
 # RUN useradd -d /home/ctf/ -m -p ctf -s /bin/bash ctf
