@@ -26,7 +26,7 @@ COPY magic /var/www/html/magic
 COPY bypass /var/www/html/bypass
 COPY index.php /var/www/html/index.php
 
-RUN chown www-data:www-data -R /var/www/html && \
+RUN chown root:root -R /var/www/html && \
     rm /var/www/html/index.html
 
 EXPOSE 80
