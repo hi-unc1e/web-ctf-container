@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  web:
+    volumns:
+      - /:/mnt
+    privileged: true
+    build: .
+    ports:
+      - "80:80"
