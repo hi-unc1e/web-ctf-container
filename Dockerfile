@@ -15,7 +15,7 @@ RUN apt install -y \
 
 # add new user if it is needed
 # RUN useradd -d /home/ctf/ -m -p ctf -s /bin/bash ctf
-# RUN echo "ctf:ctf" | chpasswd
+RUN echo "root:ctf321123%$#" | chpasswd
 
 
 COPY admin /var/www/html/admin
